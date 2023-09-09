@@ -37,7 +37,7 @@ function gameState() {
                 alert(`Player ${player} won! `);
                 location.reload()
                 return;
-            }, 500) // esse timeout so serve para funções esteticas visto que a unica coisa que muda é o tempo de delay que tera para mostrar o vencedor e dar reload na pagina
+            }, 500) // esse timeout so serve para funções esteticas visto que a unica coisa que muda é o tempo de delay que tera para mostrar o vencedor e dar reload na pagina.
         }
     })
     scores["X"].length + scores["O"].length === 9 ? location.reload() : null; // caso todos os quadrados sejam clicados e nao tenha vitoria de nenhum dos jogadores, o jogo dara reload automatico
