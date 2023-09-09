@@ -32,6 +32,7 @@ function manageBoard(e) {
 function gameState() {
     game.forEach((el) => {
         if (el.every(i => scores[player].includes(String(i)))) { // aqui eu basicamente faço um FOR OF no array que representa as condições de vitoria, e entao eu boto a condição "every" que retornara true caso o scores do player inclua todos os numeros de um dos elementos do array game.
+            tabuleiro.forEach(el => el.removeEventListener("click", manageBoard)); // remove o click de todos elementos para que o jogo acabe e as pessoas nao consigam continuar clicando enquanto o timeout esta preperando
             setTimeout(() => {
                 alert(`Player ${player} won! `);
                 location.reload()
